@@ -4,6 +4,8 @@ start:
 stop:
 	docker-compose stop
 
+restart: stop start
+
 logs:
 	docker-compose logs -f
 

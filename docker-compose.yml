@@ -30,7 +30,7 @@ services:
       - "logs-nginx:/var/log/nginx"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nginx.rule=Host(`nginx.localhost`)"
+      - "traefik.http.routers.nginx.rule=Host(`web.localhost`)"
       - "traefik.http.routers.nginx.entrypoints=web"
       - "traefik.docker.network=proxy"
     networks:
