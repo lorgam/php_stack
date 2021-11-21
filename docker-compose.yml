@@ -43,8 +43,9 @@ services:
     container_name: "php"
     depends_on:
       - "db"
+      - "mail"
     volumes:
-      - "web_app:/var/www/html:ro"
+      - "web_app:/var/www/html"
     labels:
       - "traefik.enable=false"
     networks:
@@ -60,6 +61,18 @@ services:
     labels:
       - "traefik.enable=false"
     networks:
+      - "internal"
+
+  mail:
+    image: "mailhog/mailhog"
+    container_name: "mail"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mail.rule=Host(`mail.localhost`)"
+      - "traefik.http.services.mail.loadbalancer.server.port=8025"
+      - "traefik.docker.network=proxy"
+    networks:
+      - "proxy"
       - "internal"
 
 volumes:

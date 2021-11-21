@@ -1,6 +1,6 @@
 # PHP Stack
 
-Just a php stack with nginx, fpm, mariadb and traefik.
+Just a php stack with nginx, fpm, mailhog, mariadb and traefik.
 
 You need to have installed `docker compose` and `make` to use this environment.
 
@@ -10,6 +10,6 @@ You can start the stack with `make start`, stop it with `make stop` or restart i
 
 Access the container logs with `make logs`.
 
-Access the web server at [`http://web.localhost/`](http://web.localhost/) and the router panel at [`http://localhost:8080/`](http://localhost:8080/).
+Access the web server at [`http://web.localhost/`](http://web.localhost/), the mailhog server at [`http://mail.localhost/`](http://mail.localhost/) and the router panel at [`http://localhost:8080/`](http://localhost:8080/).
 
 Access the database with `make db`.
