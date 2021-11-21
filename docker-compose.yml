@@ -41,8 +41,22 @@ services:
     build: "./fpm"
     image: "php:8.0-fpm-alpine"
     container_name: "php"
+    depends_on:
+      - "db"
     volumes:
       - "web_app:/var/www/html:ro"
+    labels:
+      - "traefik.enable=false"
+    networks:
+      - "internal"
+
+  db:
+    image: "mariadb:10.6"
+    container_name: "db"
+    environment:
+      - "MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}"
+      - "MARIADB_USER=${MARIADB_USER}"
+      - "MARIADB_PASSWORD=${MARIADB_PASSWORD}"
     labels:
       - "traefik.enable=false"
     networks:
