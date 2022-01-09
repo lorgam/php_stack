@@ -15,3 +15,8 @@ logs:
 db:
 	docker-compose exec db mysql -uroot -p$(MARIADB_ROOT_PASSWORD)
 
+ssh:
+	docker-compose exec php sh
+
+build: stop
+	docker-compose build
