@@ -43,6 +43,7 @@ services:
       - "mail"
     volumes:
       - "./src:/var/www/html"
+      - "./fpm/xdebug_install.sh:/etc/xdebug_install.sh"
     labels:
       - "traefik.enable=false"
     networks:

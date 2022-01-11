@@ -20,3 +20,10 @@ ssh:
 
 build: stop
 	docker-compose build
+
+phpv:
+	docker-compose exec php php -v
+
+xdebug:
+	docker-compose exec php sh "/etc/xdebug_install.sh"
+
