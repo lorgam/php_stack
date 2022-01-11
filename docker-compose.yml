@@ -3,6 +3,7 @@ version: "3.3"
 services:
   traefik:
     image: "traefik:v2.5"
+    container_name: "${PROJECT_NAME}_traefik"
     command:
       #- "--log.level=DEBUG"
       - "--api.insecure=true"
@@ -20,6 +21,7 @@ services:
 
   nginx:
     image: "nginx:1.21-alpine"
+    container_name: "${PROJECT_NAME}_nginx"
     depends_on:
       - "php"
     volumes:
@@ -38,6 +40,7 @@ services:
   php:
     build: "./fpm"
     image: "php:8.0-fpm-alpine"
+    container_name: "${PROJECT_NAME}_php"
     depends_on:
       - "db"
       - "mail"
@@ -65,6 +68,7 @@ services:
 
   mail:
     image: "mailhog/mailhog"
+    container_name: "${PROJECT_NAME}_mail"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.mail.rule=Host(`mail.localhost`)"
