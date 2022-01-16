@@ -12,13 +12,17 @@ restart: stop start
 logs:
 	docker-compose logs -f
 
-db:
+sql:
 	docker-compose exec db mysql -uroot -p$(MARIADB_ROOT_PASSWORD)
 
 ssh:
 	docker-compose exec php sh
 
-build: stop
+prune:
+	docker-compose down -v
+	docker volume prune
+
+build: prune
 	docker-compose build
 
 phpv:

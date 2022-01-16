@@ -16,7 +16,7 @@ You can start the stack with `make start`, stop it with `make stop` or restart i
 
 Access the container logs with `make logs`.
 
-Access the database with `make db`.
+Access the database with `make sql`.
 
 Enable XDebug with `make xdebug` and check that is correctly installed with `make phpv`
 
