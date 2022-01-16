@@ -30,7 +30,7 @@ services:
       - "logs-nginx:/var/log/nginx"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nginx.rule=Host(`web.localhost`)"
+      - "traefik.http.routers.nginx.rule=Host(`${PROJECT_NAME}.localhost`)"
       - "traefik.http.routers.nginx.entrypoints=web"
       - "traefik.docker.network=proxy"
     networks:
@@ -71,7 +71,7 @@ services:
     container_name: "${PROJECT_NAME}_mail"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.mail.rule=Host(`mail.localhost`)"
+      - "traefik.http.routers.mail.rule=Host(`${PROJECT_NAME}.mail.localhost`)"
       - "traefik.http.services.mail.loadbalancer.server.port=8025"
       - "traefik.docker.network=proxy"
     networks:
