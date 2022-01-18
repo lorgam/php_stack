@@ -1,6 +1,13 @@
 # PHP Stack
 
-Just a php stack with nginx, fpm, mailhog, mariadb and traefik, optionally XDebug.
+Software | Version
+--- | ---
+FPM | 8.0
+Nginx | 1.21
+MariaDB | 10.6
+Mailhog | 
+Traefik | 2.5
+XDebug | 
 
 ## Installation
 
