@@ -8,7 +8,12 @@
 
 <div id="main">
   <div id="links">
-    <a href="db.php">Tests base de datos</a>
+	<div>
+		<a href="db.php">Tests base de datos</a>
+	</div>
+	<div>
+    	<a href="info.php" target="_blank">PHP info</a>
+	</div>
   </div>
 </div>
   

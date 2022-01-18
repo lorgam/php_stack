@@ -2,7 +2,7 @@
 
 $servername = "db";
 $username = "root";
-$password = "123456";
+$password = getenv('MARIADB_ROOT_PASSWORD');
 $database = "test";
 
 ?>
