@@ -10,7 +10,7 @@ $database = "test";
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Tests Base de datos</title>
+  <title>Database tests</title>
 </head>
 <body>
 
@@ -20,9 +20,9 @@ $database = "test";
 <?php
     $mysqli = mysqli_connect($servername, $username, $password, $database);
     if (mysqli_connect_errno()) {
-      echo 'Fallo al contenctar a mysql: ';
+      echo 'Database connection error: ';
       echo mysqli_connect_error();
-    } else echo 'Conectado correctamente';
+    } else echo 'Succesfully connected';
 ?>
   </div>
 </div>
@@ -36,7 +36,7 @@ $database = "test";
       $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
       // set the PDO error mode to exception
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo 'Conectado correctamente';
+      echo 'Succesfully connected';
     } catch(PDOException $e) {
       echo 'Connection failed: ';
       echo $e->getMessage();
@@ -45,7 +45,7 @@ $database = "test";
 ?>
   </div>
 
-  <a href="index.php">Volver</a>
+  <a href="index.php">Go back</a>
 </div>
 
 </body>

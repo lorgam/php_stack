@@ -2,20 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Página principal</title>
+  <title>PHP Stack</title>
 </head>
 <body>
 
 <div id="main">
   <div id="links">
 	<div>
-		<a href="db.php">Tests base de datos</a>
+		<a href="db.php">Database tests</a>
+	</div>
+	<div>
+    	<a href="mail.php">Test Mail</a>
 	</div>
 	<div>
     	<a href="info.php" target="_blank">PHP info</a>
-	</div>
-	<div>
-    	<a href="mail.php" target="_blank">Test Mail</a>
 	</div>
   </div>
 </div>

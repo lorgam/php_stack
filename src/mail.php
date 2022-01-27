@@ -7,7 +7,7 @@
 <body>
 
 <div>
-  <h2>Test MailHog</h2>
+  <h2>Test Mail</h2>
   <div>
 
 <?php
