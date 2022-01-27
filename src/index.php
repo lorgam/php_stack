@@ -14,6 +14,9 @@
 	<div>
     	<a href="info.php" target="_blank">PHP info</a>
 	</div>
+	<div>
+    	<a href="mail.php" target="_blank">Test Mail</a>
+	</div>
   </div>
 </div>
   
