@@ -46,7 +46,7 @@ services:
       - "db"
       - "mail"
     volumes:
-      - "./src:/var/www/html:ro"
+      - "./src:/var/www/html"
       - "./fpm/php_mailer.ini:/usr/local/etc/php/conf.d/php_mailer.ini:ro"
       - "./fpm/xdebug_install.sh:/etc/xdebug_install.sh:ro"
     labels:
