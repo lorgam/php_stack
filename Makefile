@@ -34,3 +34,6 @@ phpv:
 xdebug:
 	docker-compose exec php sh "/etc/xdebug_install.sh"
 
+create-sf:
+	docker-compose exec php composer create-project symfony/skeleton .
+	docker-compose exec php composer require webapp
