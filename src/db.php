@@ -3,7 +3,7 @@
 $servername = "db";
 $username = "root";
 $password = getenv('MARIADB_ROOT_PASSWORD');
-$database = "test";
+$database = "local";
 
 ?>
 <!DOCTYPE html>
